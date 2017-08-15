@@ -21,6 +21,7 @@ end
 # apt repository
 apt_repository "newrelic" do
   uri node["newrelic-sysmond"]["apt_uri"]
+  distribution node["newrelic-sysmond"]["apt_distribution"]
   components %w[newrelic non-free]
   key node["newrelic-sysmond"]["apt_key"]
   keyserver node["newrelic-sysmond"]["keyserver"]
